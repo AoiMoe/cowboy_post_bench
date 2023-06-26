@@ -24,5 +24,3 @@ logs
 
 rebar3
 rebar.lock
-
-result*/*
