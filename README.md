@@ -21,3 +21,9 @@ make
 - Xubuntu 16.04
 - OTP-21.3.8.18
 - OPT-26.0
+
+
+## Result summary
+- [OTP-21](result.otp21/summary.md)
+- [OTP-26 without JIT](result.otp26/summary.md)
+- [OTP-26 with JIT](result.otp26_jit/summary.md)
