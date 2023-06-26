@@ -1,0 +1,15 @@
+%% vim: set ft=erlang : -*- erlang -*-
+{application, cowboy_post_bench,
+ [
+  {description, "cowboy post bench"},
+  {vsn, git},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  ranch,
+                  cowlib,
+                  cowboy,
+                  getopt
+                 ]},
+  {env, [{port, 11111}]}
+ ]}.

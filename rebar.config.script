@@ -1,0 +1,45 @@
+DefaultCowboyVersion = "2.10.0",
+
+CowboyVersion = os:getenv("COWBOY_VERSION", "2.10.0"),
+
+IsCowboy2 =
+  case re:run(CowboyVersion, "^(1|2)\\.(\\d+)\\.(\\d+)$", [{capture, all, list}]) of
+      {match, [CowboyVersion, "1" , _, _]} -> false;
+      {match, [CowboyVersion, "2" , _, _]} -> true
+  end,
+
+Info = fun(Fmt, Args) -> io:format(standard_io, Fmt ++ "~n", Args) end,
+Replacer = fun(Config, MapFuns) -> lists:foldl(fun(F, Acc) -> F(Acc) end, Config, MapFuns) end,
+
+BuildDir = "_build.cowboy" ++ CowboyVersion,
+
+BuildDirFun = fun(C0) ->
+                      Info("build base directory : ~s", [BuildDir]),
+                      [{base_dir, BuildDir} | C0]
+              end,
+
+Deps = [
+        {cowboy, CowboyVersion},
+        {getopt, "1.0.2"}
+       ],
+DepsFun = fun(C0) ->
+                  lists:keyreplace(deps, 1, C0, {deps, Deps})
+          end,
+
+ErlOptsFun = fun(C0) ->
+                     ErlOpts0 = case lists:keysearch(erl_opts, 1, C0) of
+                                    {value, {erl_opts, V}} -> V;
+                                    false -> []
+                                end,
+                     ErlOpts = if IsCowboy2 -> ErlOpts0;
+                                  true -> [{d, 'COWBOY1'} | ErlOpts0]
+                               end,
+                     lists:keyreplace(erl_opts, 1, C0, {erl_opts, ErlOpts})
+             end,
+
+Replacer(CONFIG,
+         [
+          BuildDirFun,
+          DepsFun,
+          ErlOptsFun
+         ]).
