@@ -5,17 +5,17 @@
 -define(LISTENER, cowboy_post_bench_http_listener).
 
 main(Args) ->
-    Options = parse_args(Args),
-    _ = application:set_env(cowboy_post_bench, control_pid, self()),
+    Options0 = parse_args(Args),
+    _ = io:format(standard_error, "~9999p~n", [Options0]),
+    Options = Options0#{control_pid => self()},
     case Options of
         #{with_header := true} -> _ = io:format("path	ms	size~n");
         _ -> ok
     end,
     _ = error_logger:tty(false),
     {ok, Started} = application:ensure_all_started(cowboy_post_bench),
-    Port = maps:get(port, Options),
-    _ = start_server(Port),
-    _ = io:format(standard_error, "~s: start: port=~p~n", [?MODULE, Port]),
+    _ = start_server(Options),
+    _ = io:format(standard_error, "~s: start: port=~p~n", [?MODULE, maps:get(port, Options)]),
     _ = receive quit -> ok end,
     _ = timer:sleep(1000),
     _ = io:format(standard_error, "~s: quit ... ", [?MODULE]),
@@ -27,7 +27,10 @@ main(Args) ->
 args_spec() ->
     [
      {port, $p, "port", {integer, 11111}, "port to listen"},
-     {with_header, undefined, "with-header", undefined, "with header row"}
+     {with_header, undefined, "with-header", undefined, "with header row"},
+     {length, undefined, "length", {integer, 8000000}, "length parameter for cowboy_req:body (cowboy1) or cowboy_req:read_body (cowboy2)"},
+     {initial_stream_flow_size, undefined, "initial-stream-flow-size", {integer, 65535}, "initial stream flow size parameter (cowboy2)"},
+     {active_n, undefined, "active-n", {integer, 100}, "active N parameter (cowboy2)"}
     ].
 
 show_usage() ->
@@ -50,14 +53,18 @@ parse_args(Args) ->
 
 -ifdef(COWBOY1).
 
-start_server(Port) ->
-    Dispatch = cowboy_router:compile([{'_', [{'_', cowboy_post_bench_http_handler, []}]}]),
+start_server(Options = #{port := Port}) ->
+    Dispatch = cowboy_router:compile([{'_', [{'_', cowboy_post_bench_http_handler, Options}]}]),
     {ok, _} = cowboy:start_http(?LISTENER, 8, [{port, Port}], [{env, [{dispatch, Dispatch}]}]).
 
 -else.
 
-start_server(Port) ->
-    Dispatch = cowboy_router:compile([{'_', [{'_', cowboy_post_bench_http_handler, []}]}]),
-    {ok, _} = cowboy:start_clear(?LISTENER, [{port, Port}], #{env => #{dispatch => Dispatch}}).
+start_server(Options = #{port := Port, active_n := ActiveN, initial_stream_flow_size := InitialStreamFlowSize}) ->
+    Dispatch = cowboy_router:compile([{'_', [{'_', cowboy_post_bench_http_handler, Options}]}]),
+    {ok, _} = cowboy:start_clear(?LISTENER, [{port, Port}],
+                                 #{env => #{dispatch => Dispatch},
+                                   active_n => ActiveN,
+                                   initial_stream_flow_size => InitialStreamFlowSize
+                                  }).
 
 -endif.

@@ -1,6 +1,18 @@
 DefaultCowboyVersion = "2.10.0",
 
 CowboyVersion = os:getenv("COWBOY_VERSION", "2.10.0"),
+{CowboyRef, CowboyDep} =
+  case os:getenv("COWBOY_REPO") of
+      false -> {CowboyVersion, {cowboy, CowboyVersion}};
+      CowboyRepo ->
+          {Kind, Ref} =
+              case os:getenv("COWBOY_BRANCH") of
+                  false -> {tag, os:getenv("COWBOY_TAG", CowboyVersion)};
+                  Branch -> {branch, Branch}
+              end,
+          {Ref, {cowboy, {git, CowboyRepo, {Kind, Ref}}}}
+  end,
+BuildSuffix = os:getenv("BUILD_SUFFIX", CowboyRef),
 
 IsCowboy2 =
   case re:run(CowboyVersion, "^(1|2)\\.(\\d+)\\.(\\d+)$", [{capture, all, list}]) of
@@ -11,20 +23,15 @@ IsCowboy2 =
 Info = fun(Fmt, Args) -> io:format(standard_io, Fmt ++ "~n", Args) end,
 Replacer = fun(Config, MapFuns) -> lists:foldl(fun(F, Acc) -> F(Acc) end, Config, MapFuns) end,
 
-BuildDir = "_build.cowboy" ++ CowboyVersion,
+BuildDir = "_build.cowboy" ++ BuildSuffix,
 
-BuildDirFun = fun(C0) ->
-                      Info("build base directory : ~s", [BuildDir]),
-                      [{base_dir, BuildDir} | C0]
-              end,
+BuildDirFun = fun(C0) -> [{base_dir, BuildDir} | C0] end,
 
 Deps = [
-        {cowboy, CowboyVersion},
+        CowboyDep,
         {getopt, "1.0.2"}
        ],
-DepsFun = fun(C0) ->
-                  lists:keyreplace(deps, 1, C0, {deps, Deps})
-          end,
+DepsFun = fun(C0) -> lists:keyreplace(deps, 1, C0, {deps, Deps}) end,
 
 ErlOptsFun = fun(C0) ->
                      ErlOpts0 = case lists:keysearch(erl_opts, 1, C0) of
@@ -37,6 +44,8 @@ ErlOptsFun = fun(C0) ->
                      lists:keyreplace(erl_opts, 1, C0, {erl_opts, ErlOpts})
              end,
 
+Info("build base directory : ~s", [BuildDir]),
+Info("cowboy dependency: ~p", [CowboyDep]),
 Replacer(CONFIG,
          [
           BuildDirFun,
