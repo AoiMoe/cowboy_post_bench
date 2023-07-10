@@ -11,20 +11,42 @@
   - Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 14.0
     - with JIT
 
-### Averages
+### Test1
 
 ```
-cowboy-1.1.2, size=1M, 10times average(ms): 14.791
-cowboy-1.1.2, size=10M, 10times average(ms): 12.997
-cowboy-1.1.2, size=100M, 10times average(ms): 65.237
-cowboy-1.1.2, size=1G, 10times average(ms): 647.311
-cowboy-2.10.0, size=1M, 10times average(ms): 6.349
-cowboy-2.10.0, size=10M, 10times average(ms): 60.930
-cowboy-2.10.0, size=100M, 10times average(ms): 525.656
-cowboy-2.10.0, size=1G, 10times average(ms): 5411.372
+$ grep average result.otp26_jit/test1-log.txt
+cowboy1.1.2-1M-10: average(ms)=6.171
+cowboy1.1.2-10M-10: average(ms)=12.219
+cowboy1.1.2-100M-10: average(ms)=68.612
+cowboy1.1.2-1G-10: average(ms)=743.383
+cowboy2.10.0-1M-10: average(ms)=14.379
+cowboy2.10.0-10M-10: average(ms)=64.766
+cowboy2.10.0-100M-10: average(ms)=545.160
+cowboy2.10.0-1G-10: average(ms)=5615.298
 ```
 
-- 1MB: cowboy2/cowboy1 = 0.4
-- 10MB: cowboy2/cowboy1 = 4.7
-- 100MB: cowboy2/cowboy1 = 8.1
-- 1GB: cowboy2/cowboy1 = 8.4
+- 1MB: cowboy2/cowboy1 = 2.3
+- 10MB: cowboy2/cowboy1 = 5.3
+- 100MB: cowboy2/cowboy1 = 7.9
+- 1GB: cowboy2/cowboy1 = 7.6
+
+
+### Test2
+
+```
+$ grep average result.otp26_jit/test2-log.txt
+cowboy2.10.0-1G-10-active-n10-length8000000: average(ms)=6200.232
+cowboy2.10.0-1G-10-active-n10-length80000000: average(ms)=6345.807
+cowboy2.10.0-1G-10-active-n10-length800000000: average(ms)=6243.578
+cowboy2.10.0-1G-10-active-n100-length8000000: average(ms)=5605.120
+cowboy2.10.0-1G-10-active-n100-length80000000: average(ms)=5608.048
+cowboy2.10.0-1G-10-active-n100-length800000000: average(ms)=5592.340
+cowboy2.10.0-1G-10-active-n1000-length8000000: average(ms)=5518.947
+cowboy2.10.0-1G-10-active-n1000-length80000000: average(ms)=5529.960
+cowboy2.10.0-1G-10-active-n1000-length800000000: average(ms)=5497.716
+cowboy2.10.0-1G-10-active-n10000-length8000000: average(ms)=5655.809
+cowboy2.10.0-1G-10-active-n10000-length80000000: average(ms)=5506.548
+cowboy2.10.0-1G-10-active-n10000-length800000000: average(ms)=5643.722
+```
+
+Changing `active_n` or `length` has little effect.

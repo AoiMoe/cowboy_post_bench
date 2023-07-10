@@ -1,0 +1,231 @@
+make[2]: Entering directory '/home/tshiozak/gitwork/cowboy_post_bench'
+Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 10.3.5.14
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10,initial_stream_flow_size => 65535,length => 8000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 15874
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10-length8000000: average(ms)=7887.772
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10,initial_stream_flow_size => 65535,length => 80000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 15949
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10-length80000000: average(ms)=7936.551
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10,initial_stream_flow_size => 65535,length => 800000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16023
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10-length800000000: average(ms)=7877.492
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 100,initial_stream_flow_size => 65535,length => 8000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16094
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n100-length8000000: average(ms)=7503.057
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 100,initial_stream_flow_size => 65535,length => 80000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16164
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n100-length80000000: average(ms)=7478.289
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 100,initial_stream_flow_size => 65535,length => 800000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16237
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n100-length800000000: average(ms)=7464.551
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 1000,initial_stream_flow_size => 65535,length => 8000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16307
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n1000-length8000000: average(ms)=7724.781
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 1000,initial_stream_flow_size => 65535,length => 80000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16376
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n1000-length80000000: average(ms)=7459.111
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 1000,initial_stream_flow_size => 65535,length => 800000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16446
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n1000-length800000000: average(ms)=7428.073
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10000,initial_stream_flow_size => 65535,length => 8000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16517
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10000-length8000000: average(ms)=7388.793
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10000,initial_stream_flow_size => 65535,length => 80000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16589
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10000-length80000000: average(ms)=7362.439
+run.sh: done.
+running for cowboy-2.10.0, size=1G, 10times
+#{active_n => 10000,initial_stream_flow_size => 65535,length => 800000000,port => 11111}
+cowboy_post_bench: start: port=11111
+server pid: 16706
+genarate data file: 1G bytes
+curl: 1
+curl: 2
+curl: 3
+curl: 4
+curl: 5
+curl: 6
+curl: 7
+curl: 8
+curl: 9
+curl: 10
+curl: quit
+cowboy_post_bench: quit ... done
+cowboy2.10.0-1G-10-active-n10000-length800000000: average(ms)=7442.078
+run.sh: done.
+make[2]: Leaving directory '/home/tshiozak/gitwork/cowboy_post_bench'

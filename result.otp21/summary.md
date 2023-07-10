@@ -10,21 +10,42 @@
   - OTP-21.3.8.18
   - Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 10.3.5.14
 
-### Averages
+### Test1
 
 ```
-$ grep average result.otp21/test-log.txt
-cowboy-1.1.2, size=1M, 10times average(ms): 9.882
-cowboy-1.1.2, size=10M, 10times average(ms): 14.870
-cowboy-1.1.2, size=100M, 10times average(ms): 67.726
-cowboy-1.1.2, size=1G, 10times average(ms): 669.218
-cowboy-2.10.0, size=1M, 10times average(ms): 9.929
-cowboy-2.10.0, size=10M, 10times average(ms): 82.134
-cowboy-2.10.0, size=100M, 10times average(ms): 722.683
-cowboy-2.10.0, size=1G, 10times average(ms): 7354.874
+$ grep average result.otp21/test1-log.txt
+cowboy1.1.2-1M-10: average(ms)=18.766
+cowboy1.1.2-10M-10: average(ms)=17.877
+cowboy1.1.2-100M-10: average(ms)=69.127
+cowboy1.1.2-1G-10: average(ms)=701.400
+cowboy2.10.0-1M-10: average(ms)=13.695
+cowboy2.10.0-10M-10: average(ms)=83.453
+cowboy2.10.0-100M-10: average(ms)=729.878
+cowboy2.10.0-1G-10: average(ms)=7489.999
 ```
 
-- 1MB: almost the same.
-- 10MB: cowboy2/cowboy1 = 5.5
-- 100MB: cowboy2/cowboy1 = 10.7
-- 1GB: cowboy2/cowboy1 = 11.0
+- 1MB: cowboy2/cowboy1 = 0.7
+- 10MB: cowboy2/cowboy1 = 4.7
+- 100MB: cowboy2/cowboy1 = 10.6
+- 1GB: cowboy2/cowboy1 = 10.7
+
+
+### Test2
+
+```
+$ grep average result.otp21/test2-log.txt    
+cowboy2.10.0-1G-10-active-n10-length8000000: average(ms)=7887.772
+cowboy2.10.0-1G-10-active-n10-length80000000: average(ms)=7936.551
+cowboy2.10.0-1G-10-active-n10-length800000000: average(ms)=7877.492
+cowboy2.10.0-1G-10-active-n100-length8000000: average(ms)=7503.057
+cowboy2.10.0-1G-10-active-n100-length80000000: average(ms)=7478.289
+cowboy2.10.0-1G-10-active-n100-length800000000: average(ms)=7464.551
+cowboy2.10.0-1G-10-active-n1000-length8000000: average(ms)=7724.781
+cowboy2.10.0-1G-10-active-n1000-length80000000: average(ms)=7459.111
+cowboy2.10.0-1G-10-active-n1000-length800000000: average(ms)=7428.073
+cowboy2.10.0-1G-10-active-n10000-length8000000: average(ms)=7388.793
+cowboy2.10.0-1G-10-active-n10000-length80000000: average(ms)=7362.439
+cowboy2.10.0-1G-10-active-n10000-length800000000: average(ms)=7442.078
+```
+
+Changing `active_n` or `length` has little effect.

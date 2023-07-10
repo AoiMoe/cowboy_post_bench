@@ -1,6 +1,6 @@
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -14,7 +14,7 @@
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -22,7 +22,7 @@
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -36,7 +36,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -44,7 +44,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -58,7 +58,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -66,7 +66,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -80,7 +80,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -88,7 +88,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -102,7 +102,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -110,7 +110,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -124,7 +124,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -132,7 +132,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -146,7 +146,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -154,7 +154,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -168,7 +168,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -176,7 +176,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -190,7 +190,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -198,7 +198,7 @@ ok
 ok
 *   Trying 127.0.0.1...
 * Connected to localhost (127.0.0.1) port 11111 (#0)
-> POST /cowboy2.10.0-1M HTTP/1.1
+> POST /cowboy2.10.0-1M-10 HTTP/1.1
 > Host: localhost:11111
 > User-Agent: curl/7.47.0
 > Accept: */*
@@ -212,7 +212,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]
@@ -228,7 +228,7 @@ ok
 < HTTP/1.1 200 OK
 < content-length: 4
 < content-type: text/plain
-< date: Mon, 26 Jun 2023 11:39:08 GMT
+< date: Mon, 10 Jul 2023 10:11:26 GMT
 < server: Cowboy
 < 
 { [4 bytes data]

@@ -11,21 +11,42 @@
   - Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 14.0
     - no JIT
 
-### Averages
+### Test1
 
 ```
-grep average result.otp26/test-log.txt
-cowboy-1.1.2, size=1M, 10times average(ms): 14.432
-cowboy-1.1.2, size=10M, 10times average(ms): 11.727
-cowboy-1.1.2, size=100M, 10times average(ms): 66.124
-cowboy-1.1.2, size=1G, 10times average(ms): 655.953
-cowboy-2.10.0, size=1M, 10times average(ms): 8.775
-cowboy-2.10.0, size=10M, 10times average(ms): 78.580
-cowboy-2.10.0, size=100M, 10times average(ms): 726.954
-cowboy-2.10.0, size=1G, 10times average(ms): 7287.101
+$ grep average result.otp26/test1-log.txt
+cowboy1.1.2-1M-10: average(ms)=10.182
+cowboy1.1.2-10M-10: average(ms)=12.260
+cowboy1.1.2-100M-10: average(ms)=68.285
+cowboy1.1.2-1G-10: average(ms)=806.812
+cowboy2.10.0-1M-10: average(ms)=12.695
+cowboy2.10.0-10M-10: average(ms)=78.526
+cowboy2.10.0-100M-10: average(ms)=718.439
+cowboy2.10.0-1G-10: average(ms)=7257.001
 ```
 
-- 1MB: cowboy2/cowboy1 = 0.6
-- 10MB: cowboy2/cowboy1 = 6.7
-- 100MB: cowboy2/cowboy1 = 11.0
-- 1GB: cowboy2/cowboy1 = 11.1
+- 1MB: cowboy2/cowboy1 = 1.2
+- 10MB: cowboy2/cowboy1 = 6.4
+- 100MB: cowboy2/cowboy1 = 10.5
+- 1GB: cowboy2/cowboy1 = 9.0
+
+
+### Test2
+
+```
+$ grep average result.otp26/test2-log.txt
+cowboy2.10.0-1G-10-active-n10-length8000000: average(ms)=7778.305
+cowboy2.10.0-1G-10-active-n10-length80000000: average(ms)=7614.556
+cowboy2.10.0-1G-10-active-n10-length800000000: average(ms)=7563.244
+cowboy2.10.0-1G-10-active-n100-length8000000: average(ms)=7334.242
+cowboy2.10.0-1G-10-active-n100-length80000000: average(ms)=7312.322
+cowboy2.10.0-1G-10-active-n100-length800000000: average(ms)=7260.507
+cowboy2.10.0-1G-10-active-n1000-length8000000: average(ms)=7363.506
+cowboy2.10.0-1G-10-active-n1000-length80000000: average(ms)=7447.815
+cowboy2.10.0-1G-10-active-n1000-length800000000: average(ms)=7317.825
+cowboy2.10.0-1G-10-active-n10000-length8000000: average(ms)=7265.109
+cowboy2.10.0-1G-10-active-n10000-length80000000: average(ms)=7327.915
+cowboy2.10.0-1G-10-active-n10000-length800000000: average(ms)=7585.791
+```
+
+Changing `active_n` or `length` has little effect.

@@ -1,8 +1,9 @@
-make[1]: Entering directory '/home/tshiozak/gitwork/cowboy_post_bench'
+make[2]: Entering directory '/home/tshiozak/gitwork/cowboy_post_bench'
 Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 14.0
-running for cowboy-1.1.2, size=1M, 10{times}
+running for cowboy-1.1.2, size=1M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 9748
+server pid: 13147
 genarate data file: 1M bytes
 curl: 1
 curl: 2
@@ -16,11 +17,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-1.1.2, size=1M, 10times average(ms): 14.432
+cowboy1.1.2-1M-10: average(ms)=6.171
 run.sh: done.
-running for cowboy-1.1.2, size=10M, 10{times}
+running for cowboy-1.1.2, size=10M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 9810
+server pid: 13210
 genarate data file: 10M bytes
 curl: 1
 curl: 2
@@ -34,11 +36,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-1.1.2, size=10M, 10times average(ms): 11.727
+cowboy1.1.2-10M-10: average(ms)=12.219
 run.sh: done.
-running for cowboy-1.1.2, size=100M, 10{times}
+running for cowboy-1.1.2, size=100M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 9872
+server pid: 13273
 genarate data file: 100M bytes
 curl: 1
 curl: 2
@@ -52,11 +55,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-1.1.2, size=100M, 10times average(ms): 66.124
+cowboy1.1.2-100M-10: average(ms)=68.612
 run.sh: done.
-running for cowboy-1.1.2, size=1G, 10{times}
+running for cowboy-1.1.2, size=1G, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 9934
+server pid: 13336
 genarate data file: 1G bytes
 curl: 1
 curl: 2
@@ -70,11 +74,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-1.1.2, size=1G, 10times average(ms): 655.953
+cowboy1.1.2-1G-10: average(ms)=743.383
 run.sh: done.
-running for cowboy-2.10.0, size=1M, 10{times}
+running for cowboy-2.10.0, size=1M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 9996
+server pid: 13401
 genarate data file: 1M bytes
 curl: 1
 curl: 2
@@ -88,11 +93,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-2.10.0, size=1M, 10times average(ms): 8.775
+cowboy2.10.0-1M-10: average(ms)=14.379
 run.sh: done.
-running for cowboy-2.10.0, size=10M, 10{times}
+running for cowboy-2.10.0, size=10M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 10058
+server pid: 13464
 genarate data file: 10M bytes
 curl: 1
 curl: 2
@@ -106,11 +112,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-2.10.0, size=10M, 10times average(ms): 78.580
+cowboy2.10.0-10M-10: average(ms)=64.766
 run.sh: done.
-running for cowboy-2.10.0, size=100M, 10{times}
+running for cowboy-2.10.0, size=100M, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 10122
+server pid: 13532
 genarate data file: 100M bytes
 curl: 1
 curl: 2
@@ -124,11 +131,12 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-2.10.0, size=100M, 10times average(ms): 726.954
+cowboy2.10.0-100M-10: average(ms)=545.160
 run.sh: done.
-running for cowboy-2.10.0, size=1G, 10{times}
+running for cowboy-2.10.0, size=1G, 10times
+#{port => 11111,length => 8000000,initial_stream_flow_size => 65535,active_n => 100}
 cowboy_post_bench: start: port=11111
-server pid: 10184
+server pid: 13596
 genarate data file: 1G bytes
 curl: 1
 curl: 2
@@ -142,6 +150,6 @@ curl: 9
 curl: 10
 curl: quit
 cowboy_post_bench: quit ... done
-cowboy-2.10.0, size=1G, 10times average(ms): 7287.101
+cowboy2.10.0-1G-10: average(ms)=5615.298
 run.sh: done.
-make[1]: Leaving directory '/home/tshiozak/gitwork/cowboy_post_bench'
+make[2]: Leaving directory '/home/tshiozak/gitwork/cowboy_post_bench'
