@@ -30,7 +30,8 @@ args_spec() ->
      {with_header, undefined, "with-header", undefined, "with header row"},
      {length, undefined, "length", {integer, 8000000}, "length parameter for cowboy_req:body (cowboy1) or cowboy_req:read_body (cowboy2)"},
      {initial_stream_flow_size, undefined, "initial-stream-flow-size", {integer, 65535}, "initial stream flow size parameter (cowboy2)"},
-     {active_n, undefined, "active-n", {integer, 100}, "active N parameter (cowboy2)"}
+     {active_n, undefined, "active-n", {integer, 100}, "active N parameter (cowboy2)"},
+     {so_buffer, undefined, "so-buffer", integer, "socket buffer (patched cowboy2)"}
     ].
 
 show_usage() ->
@@ -61,10 +62,14 @@ start_server(Options = #{port := Port}) ->
 
 start_server(Options = #{port := Port, active_n := ActiveN, initial_stream_flow_size := InitialStreamFlowSize}) ->
     Dispatch = cowboy_router:compile([{'_', [{'_', cowboy_post_bench_http_handler, Options}]}]),
-    {ok, _} = cowboy:start_clear(?LISTENER, [{port, Port}],
-                                 #{env => #{dispatch => Dispatch},
-                                   active_n => ActiveN,
-                                   initial_stream_flow_size => InitialStreamFlowSize
-                                  }).
+    ProtocolOpts0 = #{env => #{dispatch => Dispatch},
+                      active_n => ActiveN,
+                      initial_stream_flow_size => InitialStreamFlowSize
+                     },
+    ProtocolOpts = case Options of
+                       #{so_buffer := N} -> ProtocolOpts0#{so_buffer => N};
+                       _ -> ProtocolOpts0
+                   end,
+    {ok, _} = cowboy:start_clear(?LISTENER, [{port, Port}], ProtocolOpts).
 
 -endif.

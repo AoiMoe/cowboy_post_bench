@@ -1,11 +1,11 @@
 #! /bin/sh
 
 usage() {
-    echo "usage: $0 [--length=length] [--active-n=active-n] <version> <size> <times>" >&2
+    echo "usage: $0 [--length=length] [--active-n=active-n] [--so-buffer=so-buffer] <version> <size> <times>" >&2
     exit 1
 }
 
-args=$(/usr/bin/getopt -l length:,active-n:,port: "" $*) || usage
+args=$(/usr/bin/getopt -l length:,active-n:,port:,so-buffer: "" $*) || usage
 eval "set -- $args"
 
 base_filename_appendix=""
@@ -13,7 +13,7 @@ opts=""
 port=11111
 while test $# -gt 0; do
     case $1 in
-        --length | --active-n)
+        --length | --active-n | --so-buffer)
             opts="${opts}$1 $2 "
             base_filename_appendix="${base_filename_appendix}${1#-}$2"
             shift 2

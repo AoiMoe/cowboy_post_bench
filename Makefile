@@ -12,7 +12,12 @@ TEST2_ACTIVE_NS = 10 100 1000 10000
 TEST2_LENGTHS = 8000000 80000000 800000000
 TEST2_TIMES = 10
 
-TESTS=1 2
+TEST3_VERSION = 2_so_buffer
+TEST3_SIZE = 1G
+TEST3_SO_BUFFERS = 1460 8192 16384 32768 65536 131072 262144 524288
+TEST3_TIMES = 10
+
+TESTS=1 2 3
 
 RESULTDIR = result
 
@@ -44,9 +49,18 @@ _test2:
 		done; \
 	done
 
+.PHONY: _test3
+_test3:
+	@erl -version
+	@for i in $(TEST3_SO_BUFFERS); do \
+		./scripts/run.sh --so-buffer=$$i $(TEST3_VERSION) $(TEST3_SIZE) $(TEST3_TIMES); \
+		done; \
+	done
+
 .PHONY: all
 all:
 	@for i in $(VERSIONS); do $(MAKE) COWBOY_VERSION=$$i _escriptize; done
+	@$(MAKE) _escriptize_so_buffer
 
 .PHONY: clean
 clean:
@@ -57,6 +71,10 @@ clean:
 _escriptize:
 	$(REBAR3) escriptize
 
+.PHONY: _escriptize_so_buffer
+_escriptize_so_buffer:
+	env COWBOY_REPO=https://github.com/AoiMoe/cowboy.git COWBOY_BRANCH=feature/add_so_buffer BUILD_SUFFIX=2_so_buffer \
+		$(REBAR3) escriptize
 
 .PHONY: _clean
 _clean:
