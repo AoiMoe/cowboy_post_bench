@@ -1,0 +1,236 @@
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:52 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:54 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:55 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:56 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:57 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:48:59 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:49:00 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:49:01 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:49:02 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /cowboy2_so_buffer-1G-10-so-buffer131072 HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> Content-Length: 1073741824
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+< HTTP/1.1 100 Continue
+} [16384 bytes data]
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:49:04 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 11111 (#0)
+> POST /quit HTTP/1.1
+> Host: localhost:11111
+> User-Agent: curl/7.47.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< content-length: 4
+< content-type: text/plain
+< date: Tue, 11 Jul 2023 12:49:04 GMT
+< server: Cowboy
+< 
+{ [4 bytes data]
+* Connection #0 to host localhost left intact
+ok

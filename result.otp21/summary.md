@@ -49,3 +49,21 @@ cowboy2.10.0-1G-10-active-n10000-length800000000: average(ms)=7442.078
 ```
 
 Changing `active_n` or `length` has little effect.
+
+
+### Test3
+
+```
+$ grep ave result.otp21/test3*.txt
+cowboy2_so_buffer-1G-10-so-buffer1460: average(ms)=7588.170
+cowboy2_so_buffer-1G-10-so-buffer8192: average(ms)=2088.018
+cowboy2_so_buffer-1G-10-so-buffer16384: average(ms)=1478.754
+cowboy2_so_buffer-1G-10-so-buffer32768: average(ms)=1152.600
+cowboy2_so_buffer-1G-10-so-buffer65536: average(ms)=978.629
+cowboy2_so_buffer-1G-10-so-buffer131072: average(ms)=870.632
+cowboy2_so_buffer-1G-10-so-buffer262144: average(ms)=838.661
+cowboy2_so_buffer-1G-10-so-buffer524288: average(ms)=1078.477
+```
+
+- 1460-262144 : The bigger the better performance.
+- 524288 : Too big and it is conterproductive.

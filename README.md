@@ -23,6 +23,9 @@ make
 ### test2
 - Repeat the test unit in various active_n and length options setting with cowboy2 and 1Gbytes binary.
 
+### test3
+- Repeat the test unit in various socket setopts buffer sizes with patched cowboy2 and 1Gbytes binary.
+
 
 ## Tested platforms
 - Xubuntu 16.04
@@ -38,3 +41,4 @@ make
 ### Findings
 - Cowboy2 is about 10 times (without JIT) or 7.6 times (with JIT) slower than cowboy1 for uploading 1 1Gbyte file.
 - Changing `active_n` or `length` has too little effect to solve the problem.
+- Changing `buffer` has large effect, but still slightly slower than Cowboy1.
